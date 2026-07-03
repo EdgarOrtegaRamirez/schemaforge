@@ -231,7 +231,6 @@ func buildBinary(t *testing.T) string {
 	t.Helper()
 	bin := filepath.Join(t.TempDir(), "schemaforge")
 	cmd := exec.Command("go", "build", "-o", bin, ".")
-	cmd.Dir = "/root/workspace/schemaforge"
 	output, err := cmd.CombinedOutput()
 	if err != nil {
 		t.Fatalf("build failed: %v\n%s", err, output)
