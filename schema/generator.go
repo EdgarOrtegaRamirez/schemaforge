@@ -403,13 +403,13 @@ func detectStringFormat(strs []string) string {
 	}
 
 	formats := map[string]func(string) bool{
-		"email":  isEmail,
-		"uri":    isURI,
-		"uuid":   isUUID,
-		"date":   isDate,
+		"email":     isEmail,
+		"uri":       isURI,
+		"uuid":      isUUID,
+		"date":      isDate,
 		"date-time": isDateTime,
-		"ipv4":   isIPv4,
-		"ipv6":   isIPv6,
+		"ipv4":      isIPv4,
+		"ipv6":      isIPv6,
 	}
 
 	for format, check := range formats {

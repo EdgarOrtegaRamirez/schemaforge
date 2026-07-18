@@ -9,36 +9,36 @@ import (
 
 // Schema represents a JSON Schema document (draft-07/2020-12 compatible)
 type Schema struct {
-	Schema           string                 `json:"$schema,omitempty"`
-	ID               string                 `json:"$id,omitempty"`
-	Title            string                 `json:"title,omitempty"`
-	Description      string                 `json:"description,omitempty"`
-	Type             TypeOrArray            `json:"type,omitempty"`
-	Properties       map[string]*Schema     `json:"properties,omitempty"`
-	Required         []string               `json:"required,omitempty"`
-	Items            *Schema                `json:"items,omitempty"`
-	AdditionalProps  *AdditionalProperties `json:"additionalProperties,omitempty"`
-	Enum             []interface{}          `json:"enum,omitempty"`
-	Const            interface{}            `json:"const,omitempty"`
-	Default          interface{}            `json:"default,omitempty"`
-	Examples         []interface{}          `json:"examples,omitempty"`
-	AllOf            []*Schema              `json:"allOf,omitempty"`
-	AnyOf            []*Schema              `json:"anyOf,omitempty"`
-	OneOf            []*Schema              `json:"oneOf,omitempty"`
-	Not              *Schema                `json:"not,omitempty"`
-	If               *Schema                `json:"if,omitempty"`
-	Then             *Schema                `json:"then,omitempty"`
-	Else             *Schema                `json:"else,omitempty"`
-	Ref              string                 `json:"$ref,omitempty"`
-	DynamicRef       string                 `json:"$dynamicRef,omitempty"`
-	Defs             map[string]*Schema     `json:"$defs,omitempty"`
-	Definitions      map[string]*Schema     `json:"definitions,omitempty"`
+	Schema          string                `json:"$schema,omitempty"`
+	ID              string                `json:"$id,omitempty"`
+	Title           string                `json:"title,omitempty"`
+	Description     string                `json:"description,omitempty"`
+	Type            TypeOrArray           `json:"type,omitempty"`
+	Properties      map[string]*Schema    `json:"properties,omitempty"`
+	Required        []string              `json:"required,omitempty"`
+	Items           *Schema               `json:"items,omitempty"`
+	AdditionalProps *AdditionalProperties `json:"additionalProperties,omitempty"`
+	Enum            []interface{}         `json:"enum,omitempty"`
+	Const           interface{}           `json:"const,omitempty"`
+	Default         interface{}           `json:"default,omitempty"`
+	Examples        []interface{}         `json:"examples,omitempty"`
+	AllOf           []*Schema             `json:"allOf,omitempty"`
+	AnyOf           []*Schema             `json:"anyOf,omitempty"`
+	OneOf           []*Schema             `json:"oneOf,omitempty"`
+	Not             *Schema               `json:"not,omitempty"`
+	If              *Schema               `json:"if,omitempty"`
+	Then            *Schema               `json:"then,omitempty"`
+	Else            *Schema               `json:"else,omitempty"`
+	Ref             string                `json:"$ref,omitempty"`
+	DynamicRef      string                `json:"$dynamicRef,omitempty"`
+	Defs            map[string]*Schema    `json:"$defs,omitempty"`
+	Definitions     map[string]*Schema    `json:"definitions,omitempty"`
 
 	// String constraints
-	MinLength *int    `json:"minLength,omitempty"`
-	MaxLength *int    `json:"maxLength,omitempty"`
-	Pattern   string  `json:"pattern,omitempty"`
-	Format    string  `json:"format,omitempty"`
+	MinLength *int   `json:"minLength,omitempty"`
+	MaxLength *int   `json:"maxLength,omitempty"`
+	Pattern   string `json:"pattern,omitempty"`
+	Format    string `json:"format,omitempty"`
 
 	// Number constraints
 	MultipleOf       *float64 `json:"multipleOf,omitempty"`
@@ -48,14 +48,14 @@ type Schema struct {
 	ExclusiveMaximum *float64 `json:"exclusiveMaximum,omitempty"`
 
 	// Array constraints
-	MinItems *int     `json:"minItems,omitempty"`
-	MaxItems *int     `json:"maxItems,omitempty"`
-	UniqueItems *bool `json:"uniqueItems,omitempty"`
-	Contains *Schema  `json:"contains,omitempty"`
+	MinItems    *int    `json:"minItems,omitempty"`
+	MaxItems    *int    `json:"maxItems,omitempty"`
+	UniqueItems *bool   `json:"uniqueItems,omitempty"`
+	Contains    *Schema `json:"contains,omitempty"`
 
 	// Object constraints
-	MinProperties *int              `json:"minProperties,omitempty"`
-	MaxProperties *int              `json:"maxProperties,omitempty"`
+	MinProperties *int               `json:"minProperties,omitempty"`
+	MaxProperties *int               `json:"maxProperties,omitempty"`
 	PatternProps  map[string]*Schema `json:"patternProperties,omitempty"`
 	PropertyNames *Schema            `json:"propertyNames,omitempty"`
 

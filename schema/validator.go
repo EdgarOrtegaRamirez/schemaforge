@@ -10,8 +10,8 @@ import (
 
 // ValidationError represents a single validation error
 type ValidationError struct {
-	Path    string `json:"path"`
-	Message string `json:"message"`
+	Path       string `json:"path"`
+	Message    string `json:"message"`
 	SchemaPath string `json:"schema_path,omitempty"`
 }
 
@@ -24,8 +24,8 @@ func (e ValidationError) Error() string {
 
 // ValidationResult contains the result of schema validation
 type ValidationResult struct {
-	Valid  bool               `json:"valid"`
-	Errors []ValidationError  `json:"errors,omitempty"`
+	Valid  bool              `json:"valid"`
+	Errors []ValidationError `json:"errors,omitempty"`
 }
 
 func (r *ValidationResult) AddError(path, message, schemaPath string) {

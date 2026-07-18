@@ -33,7 +33,7 @@ func TestSchemaFromJSON(t *testing.T) {
 
 func TestSchemaToJSON(t *testing.T) {
 	s := &Schema{
-		Type: TypeOrArray{Types: []string{"string"}},
+		Type:  TypeOrArray{Types: []string{"string"}},
 		Title: "test",
 	}
 
@@ -109,9 +109,9 @@ func TestRequiredSet(t *testing.T) {
 func TestSortedPropertyNames(t *testing.T) {
 	s := &Schema{
 		Properties: map[string]*Schema{
-			"zebra":  {},
-			"apple":  {},
-			"mango":  {},
+			"zebra": {},
+			"apple": {},
+			"mango": {},
 		},
 	}
 

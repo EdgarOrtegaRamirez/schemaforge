@@ -16,18 +16,18 @@ const (
 
 // SchemaDiff represents a single difference between two schemas
 type SchemaDiff struct {
-	Type       DiffType   `json:"type"`
-	Path       string     `json:"path"`
-	Message    string     `json:"message"`
-	OldValue   interface{} `json:"old_value,omitempty"`
-	NewValue   interface{} `json:"new_value,omitempty"`
+	Type     DiffType    `json:"type"`
+	Path     string      `json:"path"`
+	Message  string      `json:"message"`
+	OldValue interface{} `json:"old_value,omitempty"`
+	NewValue interface{} `json:"new_value,omitempty"`
 }
 
 // DiffResult contains the result of comparing two schemas
 type DiffResult struct {
-	Identical bool          `json:"identical"`
-	Diffs     []SchemaDiff  `json:"diffs,omitempty"`
-	Summary   DiffSummary   `json:"summary"`
+	Identical bool         `json:"identical"`
+	Diffs     []SchemaDiff `json:"diffs,omitempty"`
+	Summary   DiffSummary  `json:"summary"`
 }
 
 // DiffSummary provides counts of different diff types

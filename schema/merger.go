@@ -210,8 +210,8 @@ func (m *Merger) mergeSimple(typ string) (*Schema, error) {
 
 func (m *Merger) mergeAnyOf() (*Schema, error) {
 	merged := &Schema{
-		AnyOf: m.schemas,
-		Title: m.options.Title,
+		AnyOf:       m.schemas,
+		Title:       m.options.Title,
 		Description: m.options.Description,
 	}
 	return merged, nil

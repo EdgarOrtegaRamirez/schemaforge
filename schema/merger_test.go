@@ -6,11 +6,11 @@ import (
 
 func TestMergeSameType(t *testing.T) {
 	s1 := &Schema{
-		Type: TypeOrArray{Types: []string{"string"}},
+		Type:      TypeOrArray{Types: []string{"string"}},
 		MinLength: intPtr(1),
 	}
 	s2 := &Schema{
-		Type: TypeOrArray{Types: []string{"string"}},
+		Type:      TypeOrArray{Types: []string{"string"}},
 		MaxLength: intPtr(100),
 	}
 

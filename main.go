@@ -100,8 +100,8 @@ property count, type distribution, and constraint summary.`,
 func runGenerate(cmd *cobra.Command, args []string) error {
 	gen := schema.NewGenerator(schema.GeneratorOptions{
 		DetectFormat: !cmd.Flag("no-format").Changed,
-		Title:       cmd.Flag("title").Value.String(),
-		Description: cmd.Flag("description").Value.String(),
+		Title:        cmd.Flag("title").Value.String(),
+		Description:  cmd.Flag("description").Value.String(),
 	})
 
 	// Read from files or stdin

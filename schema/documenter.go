@@ -69,7 +69,7 @@ func (d *Documenter) ToHTML() string {
 	sb.WriteString("h2 { color: #34495e; border-bottom: 1px solid #eee; padding-bottom: 5px; }\n")
 	sb.WriteString(".property { margin: 10px 0; padding: 10px; background: #f8f9fa; border-radius: 5px; }\n")
 	sb.WriteString(".type { color: #e74c3c; font-weight: bold; }\n")
-sb.WriteString(".required { color: #e74c3c; }\n")
+	sb.WriteString(".required { color: #e74c3c; }\n")
 	sb.WriteString(".optional { color: #95a5a6; }\n")
 	sb.WriteString("code { background: #f1f1f1; padding: 2px 5px; border-radius: 3px; }\n")
 	sb.WriteString("</style>\n</head>\n<body>\n")
